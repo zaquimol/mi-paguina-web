@@ -1,0 +1,92 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Pantallas principales */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pantalla del logo de Epic Games */
+#epic-logo {
+    width: 40%;
+}
+
+/* Pantalla de carga */
+#loading-screen {
+    background: url('https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_900/ncom/software/switch/70010000010192/bf32b7992ed8c5ca0c2282c0c58d2a409c08623d82d8ff2ee44661fc063c4486') no-repeat center center;
+    background-size: cover;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+#loading-text {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.loading-bar-container {
+    width: 80%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #00ff00;
+    animation: loading 10s linear forwards;
+}
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Pantalla final */
+#final-image {
+    width: 80%;
+}
+
+#final-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#final-button:hover {
+    background-color: #003a8c;
+}

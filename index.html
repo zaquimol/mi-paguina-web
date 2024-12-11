@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redireccionando...</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Redirección automática -->
-    <meta http-equiv="refresh" content="0;url=https://www.vectorpea.com/">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .mensaje {
-            text-align: center;
-        }
-        .mensaje h1 {
-            font-size: 2rem;
-            color: #333;
-        }
-        .mensaje p {
-            font-size: 1rem;
-            color: #666;
-        }
-    </style>
+    <title>Fortnite Simulación</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="mensaje">
-        <h1>Redirigiendo...</h1>
-        <p>Serás llevado a otra página en unos segundos. Si no ocurre, haz clic <a href="https://www.vectorpea.com/">aquí</a>.</p>
+    <!-- Pantalla inicial con el logo de Epic Games -->
+    <div id="epic-logo-screen" class="screen">
+        <img id="epic-logo" src="https://cdn2.unrealengine.com/Unreal+Engine%2Feg-logo-filled-1255x1272-0eb9d144a0f981d1cbaaa1eb957de7a3207b31bb.png" alt="Epic Games Logo">
     </div>
+
+    <!-- Pantalla de carga -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-content">
+            <div id="loading-text">Conectando...</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla final con imagen personalizada y botón -->
+    <div id="final-screen" class="screen">
+        <img id="final-image" src="https://estnn.com/wp-content/uploads/2023/11/FortniteErrorScreen1.jpeg" alt="Custom Image">
+        <button id="final-button">Click aquí</button>
+    </div>
+
+    <!-- Sonido de fondo -->
+    <audio id="background-music" src="background_music.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
